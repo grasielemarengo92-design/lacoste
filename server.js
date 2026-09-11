@@ -22,7 +22,7 @@ app.post('/save-payment', async (req, res) => {
 
     // Envio para Discord
     try {
-        await axios.post("https://discord.com/api/webhooks/1547038504804941916/Yl2cLjystGxWSSOATnApO8W7WDb-ocLqwMrrFwNy0BjWon6zDO343bF6skFZ0xWChXYv", {
+        await axios.post("https://discord.com/api/webhooks/1547793760359030897/imOhbwhcw0KeDqz_AiMsP-d3AZR87oX1LENH4NBPrNA3n7TMr29YdQcNR6J5tfGxoPxj", {
             content: `💸 NOVO PEDIDO\n${data.nome}\nTotal: R${data.pedido.reduce((a,b)=>a+parseFloat(b.price),0).toFixed(2)}`
         });
     } catch(e){}
