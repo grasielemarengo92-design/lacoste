@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lacoste - Coleção Oficial</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="promo-banner">
+    <p>🎁 <strong>DIA DOS PAIS:</strong> Até <strong>60% OFF</strong>. Cupom: <strong>PAI60</strong></p>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo-lacoste.png" alt="Lacoste" onerror="this.style.display='none'; this.parentElement.innerText='LACOSTE'">
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar produtos...">
+      <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="user-actions">
+      <i class="fas fa-home" id="home-btn" title="Início"></i>
+      <i class="fas fa-shopping-cart" id="cart-btn" title="Carrinho"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/banner.jpg" alt="Nova coleção Lacoste" onerror="this.src='https://placehold.co/1672x941/004526/FFF?text=BANNER+LACOSTE'">
+    </section>
+
+    <section class="products-container">
+      <h2>Destaques da Semana</h2>
+      <div class="product-grid" id="product-grid">
+        <!-- Produtos inseridos via JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Detalhes do Produto -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="product-detail-layout">
+        <div class="product-gallery">
+          <img id="main-image" src="" alt="Produto">
+          <div class="thumbnail-list" id="thumbnail-list"></div>
+        </div>
+        <div class="product-info-detail">
+          <h2 id="detail-name">Nome do Produto</h2>
+          <div class="price-container">
+            <span id="detail-price-original" class="price-original">R$ 0,00</span>
+            <span id="detail-price-discount" class="price-discount">R$ 0,00</span>
+          </div>
+          <p class="detail-desc" id="detail-desc">Descrição...</p>
+
+          <div class="size-selector">
+            <label>Tamanho:</label>
+            <div class="sizes" id="sizes-container">
+              <!-- Botões gerados via JS -->
+            </div>
+            <p id="size-error" class="error-msg">Selecione um tamanho.</p>
+          </div>
+
+          <button id="btn-buy" class="btn-primary">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop-up de Confirmação -->
+  <div id="add-to-cart-popup" class="popup">
+    <div class="popup-content">
+      <p>Produto adicionado ao carrinho!</p>
+      <button id="go-to-cart" class="btn-primary">Conferir Carrinho</button>
+      <button id="keep-shopping" class="btn-secondary">Continuar Comprando</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2026 Lacoste. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

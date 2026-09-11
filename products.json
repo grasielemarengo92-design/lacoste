@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Camisa Polo Lacoste",
+    "description": "Camisa polo em algodão com logo bordado.",
+    "price": 299.90,
+    "image": "assets/produtos/camisa-polo.jpg"
+  },
+  {
+    "name": "Calça Jeans Lacoste",
+    "description": "Calça jeans slim fit com detalhes em couro.",
+    "price": 399.90,
+    "image": "assets/produtos/calca-jeans.jpg"
+  },
+  {
+    "name": "Tênis Lacoste",
+    "description": "Tênis esportivo com sola de borracha.",
+    "price": 599.90,
+    "image": "assets/produtos/tenis.jpg"
+  },
+  {
+    "name": "Jaqueta de Couro",
+    "description": "Jaqueta de couro sintético com zíper duplo.",
+    "price": 899.90,
+    "image": "assets/produtos/jaqueta-couro.jpg"
+  },
+  {
+    "name": "Relógio Lacoste",
+    "description": "Relógio analógico com pulseira de couro.",
+    "price": 499.90,
+    "image": "assets/produtos/relogio.jpg"
+  },
+  {
+    "name": "Boné Lacoste",
+    "description": "Boné com logo bordado na frente.",
+    "price": 129.90,
+    "image": "assets/produtos/bone.jpg"
+  }
+]

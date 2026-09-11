@@ -1,0 +1,10 @@
+assets/
+├── logo-lacoste.png          # Logo oficial da Lacoste
+├── produtos/
+│   ├── camisa-polo.jpg       # Imagem da camisa polo
+│   ├── calca-jeans.jpg       # Imagem da calça jeans
+│   ├── tenis.jpg             # Imagem do tênis
+│   ├── jaqueta-couro.jpg     # Imagem da jaqueta
+│   ├── relogio.jpg           # Imagem do relógio
+│   └── bone.jpg              # Imagem do boné
+└── favicon.ico               # Ícone do site
