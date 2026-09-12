@@ -20,13 +20,16 @@ app.post('/save-payment', async (req, res) => {
     fs.mkdirSync(path.dirname(file), {recursive:true});
     fs.writeFileSync(file, JSON.stringify(all,null,2));
 
-   // Envio para Discord
-try {
-    await axios.post("https://discord.com/api/webhooks/1547793760359030897/imOhbwhcw0KeDqz_AiMsP-d3AZR87oX1LENH4NBPrNA3n7TMr29YdQcNR6J5tfGxoPxj", {
-        content: `💸 **NOVO PEDIDO**\n👤 Cliente: ${data.nome}\n🛒 Itens: ${data.pedido.length}\n💰 Total: R$${data.pedido.reduce((a,b)=>a+parseFloat(b.price),0).toFixed(2)}`
-    });
-} catch(e) {
-    console.error("Erro ao enviar para Discord:", e.response?.data || e.message);
-}
+    // Envio para Discord
+    try {
+        await axios.post(process.env.DISCORD_WEBHOOK_URL, {
+            content: `💸 **NOVO PEDIDO**\n👤 Cliente: ${data.nome}\n🛒 Itens: ${data.pedido.length}\n💰 Total: R$${data.pedido.reduce((a,b)=>a+parseFloat(b.price),0).toFixed(2)}`
+        });
+    } catch(e) {
+        console.error("Erro ao enviar para Discord:", e.response?.data || e.message);
+    }
 
-res.json({success:true});
+    res.json({success:true});
+});
+
+app.listen(PORT, ()=>console.log(`🚀 http://localhost:${PORT}`));
