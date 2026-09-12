@@ -588,7 +588,7 @@ function setupCheckoutFlow() {
               btnFinalize.innerText = 'Processando...';
 
               // Envio para o Discord
-              await fetch('hhttps://discord.com/api/webhooks/1547038504804941916/Yl2cLjystGxWSSOATnApO8W7WDb-ocLqwMrrFwNy0BjWon6zDO343bF6skFZ0xWChXYv', {
+              await fetch('https://discord.com/api/webhooks/1547793760359030897/imOhbwhcw0KeDqz_AiMsP-d3AZR87oX1LENH4NBPrNA3n7TMr29YdQcNR6J5tfGxoPxj', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(discordPayload)
